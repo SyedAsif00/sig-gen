@@ -1,0 +1,9 @@
+.hero-section {
+  background: #fff; /* Or any other color */
+  margin-top: 70px;
+  box-sizing: border-box;
+}
+
+.hero-section p {
+  margin-bottom: 20px;
+}

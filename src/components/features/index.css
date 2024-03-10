@@ -1,0 +1,51 @@
+.features-row {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.feature-card {
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.feature-card:hover {
+  background-color: #e3f2fd;
+  transform: translateY(-5px);
+}
+
+.feature-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  background-color: #4285f4;
+  border-radius: 50%;
+  margin: 0 auto;
+  color: white;
+  font-size: 24px;
+}
+
+.feature-title {
+  font-size: 18px;
+  color: #333;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.feature-description {
+  font-size: 14px;
+  color: #666;
+}
+
+.learn-more-link {
+  display: inline-block;
+  color: #4285f4;
+  font-weight: bold;
+  text-decoration: none;
+  margin-top: 10px;
+}

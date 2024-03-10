@@ -10,11 +10,11 @@ import {
 
 function App() {
   return (
-    <div className="App">
+    <div className="App AppContainer">
       <Navbar />
       <IntroSection />
-      <Communicate />
       <Features />
+      <Communicate />
       <Footer />
       <AboutUs />
     </div>
