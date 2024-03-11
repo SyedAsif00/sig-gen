@@ -35,8 +35,8 @@ body {
     padding: 30px 100px;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1400px) {
   .App {
-    padding: 30px 100px;
+    padding: 50px 300px;
   }
 }

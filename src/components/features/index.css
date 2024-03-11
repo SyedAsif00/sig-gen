@@ -3,6 +3,12 @@
   max-width: 1200px;
 }
 
+@media (min-width: 1440px) {
+  .features-row {
+    max-width: 1400px;
+  }
+}
+
 .feature-card {
   padding: 20px;
   height: 100%;

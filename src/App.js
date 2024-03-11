@@ -29,7 +29,6 @@ function App() {
       <Influencers />
       <Freelaner />
       <Faq />
-      <Footer />
       <AboutUs />
     </div>
   );

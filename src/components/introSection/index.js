@@ -2,14 +2,18 @@ import React from "react";
 import { Row, Col, Button, Typography } from "antd";
 import "./index.css"; // Make sure to create this CSS file for additional styling
 import IntroImage from "../../assets/introImg.svg";
+import useResponsive from "../../hooks/useResponsive";
 
 const YourComponent = () => {
+  const { isMobileSmall, isMobileMedium, isTablet, isDesktop } =
+    useResponsive();
+
   return (
-    <Row align="" gutter={[16, 16]} className="hero-section">
+    <Row gutter={[16, 16]} className="hero-section" align={"middle"}>
       <Col xs={24} sm={24} md={12} lg={12} xl={12}>
         <p
           style={{
-            fontSize: "48px",
+            fontSize: isMobileSmall ? "35px" : "48px",
             fontWeight: "400",
             lineHeight: "1.2",
             color: "#000000",
@@ -18,11 +22,21 @@ const YourComponent = () => {
         >
           Email signature for personal branding enhancement.{" "}
         </p>
-        <p style={{ width: "23em", fontSize: "20px" }}>
+        <p
+          style={{
+            width: isMobileSmall ? "" : "23em",
+            fontSize: isMobileSmall ? "16px" : "20px",
+            color: "#2c4166",
+          }}
+        >
           Utilize your email signature as a marketing tool, promoting key
           services, events, or products to drive business growth
         </p>
-        <Button type="primary" size="large">
+        <Button
+          type="primary"
+          size={isMobileSmall ? "small" : "large"}
+          style={{ marginBottom: isMobileSmall ? "10px" : "" }}
+        >
           Create Signature
         </Button>
       </Col>
@@ -31,7 +45,11 @@ const YourComponent = () => {
         <div className="image-container">
           <img
             src={IntroImage}
-            style={{ width: "95%", height: "fit-content", marginLeft: "90px" }}
+            style={{
+              width: isMobileSmall ? "100%" : "95%",
+              height: "fit-content",
+              marginLeft: isMobileSmall ? "" : "90px",
+            }}
           />
         </div>
       </Col>

@@ -1,0 +1,46 @@
+/* ... other styles ... */
+* {
+  box-sizing: border-box;
+}
+.footer {
+  background-color: #002b5c; /* Dark blue background */
+  color: white; /* White text color */
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.container-mobile {
+  display: block;
+}
+
+.column h3 {
+  margin-bottom: 10px;
+}
+
+.column ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 768px) {
+  .footer {
+    background-color: #002b5c; /* Ensuring the background is correct */
+    color: white; /* White text for visibility */
+  }
+  /* ... rest of your styles for small devices */
+}
+
+.social-media {
+  display: flex;
+  justify-content: center;
+}
+
+.social-media svg {
+  margin: 0 10px;
+}
+
+/* ... other styles ... */

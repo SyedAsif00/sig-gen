@@ -3,13 +3,33 @@ import { Row, Col, Card } from "antd";
 import CommunicateTwoImg from "../../assets/communicate-two.svg";
 import { Meta } from "antd/es/list/Item";
 import "./index.css";
+import useResponsive from "../../hooks/useResponsive";
+
 const Communicate = () => {
+  const { isMobileSmall, isMobileMedium, isTablet, isDesktop } =
+    useResponsive();
+  const isSmallOrMediumDevice = isMobileSmall || isMobileMedium;
+
   return (
     <div style={{ marginTop: "100px" }}>
       <Row gutter={[30, 30]}>
         <Col xs={24} sm={24} md={12} lg={10} style={{}}>
-          <h1>Easy to customize your Email Signature</h1>
-          <p style={{ fontSize: "20px", margin: "30px 0px 0px 0px" }}>
+          <span
+            style={{
+              fontSize: isSmallOrMediumDevice ? "22px" : "24px",
+              fontWeight: "500",
+              lineHeight: "1.3",
+            }}
+          >
+            Easy to customize your Email Signature
+          </span>
+          <p
+            style={{
+              fontSize: isSmallOrMediumDevice ? "16px" : "20px",
+              margin: "30px 0px 0px 0px",
+              color: "#2c4166",
+            }}
+          >
             Facilitate client engagement via various channels like website and
             social networks. Enhance brand promotion by incorporating clickable
             banners, landing page links, and interactive CTA buttons.

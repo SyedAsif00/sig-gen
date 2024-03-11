@@ -7,7 +7,7 @@ import {
   SmileOutlined,
 } from "@ant-design/icons";
 import "./index.css"; // make sure to create this CSS file
-
+import useResponsive from "../../hooks/useResponsive";
 const featureData = [
   {
     title: "Personalized Branding",
@@ -48,21 +48,36 @@ const featureData = [
 ];
 
 const Features = () => {
+  const { isMobileSmall, isMobileMedium, isTablet, isDesktop } =
+    useResponsive();
+
   return (
-    <div className="" style={{ marginTop: "100px" }}>
+    <div className="" style={{ marginTop: isMobileSmall ? "50px" : "100px" }}>
       <div style={{ textAlign: "center", marginBottom: "30px" }}>
-        <h1 style={{ fontSize: "30px", color: "#696969", fontWeight: "300" }}>
+        <h1
+          style={{
+            fontSize: isMobileSmall ? "25pxx" : "30px",
+            color: "#696969",
+            fontWeight: "300",
+          }}
+        >
           SigGen<span style={{ color: "#4285f4", fontSize: "30px" }}>.</span>{" "}
           Features
         </h1>
-        <p style={{ fontSize: "20px", color: "#C0C0C0", marginTop: "10px" }}>
+        <p
+          style={{
+            fontSize: isMobileSmall ? "15px" : "20px",
+            color: "#C0C0C0",
+            marginTop: "10px",
+          }}
+        >
           Elevate your email signature with captivating design and essential
           information.
         </p>
       </div>
       <Row gutter={[16, 16]} className="features-row">
         {featureData.map((feature, index) => (
-          <Col key={index} xs={24} sm={12} md={8} lg={8} xl={8}>
+          <Col key={index} xs={24} sm={12} md={8} lg={8} xl={8} xxl={6}>
             <Card className="feature-card" hoverable>
               <div className="feature-icon">{feature.icon}</div>
               <div

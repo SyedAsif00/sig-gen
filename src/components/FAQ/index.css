@@ -14,6 +14,18 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
 }
 
+@media (max-width: 768px) {
+  .individual-faq {
+    width: 100%;
+  }
+}
+@media (min-width: 1300px) {
+  .individual-faq {
+    width: 100%;
+    max-width: 1000px;
+  }
+}
+
 .ant-collapse-item {
   border-radius: 4px; /* Ensures rounded corners for the accordion panels */
 }
@@ -21,11 +33,11 @@
 .ant-collapse-item > .ant-collapse-header {
   padding-left: 10px;
   border-left: 5px solid transparent;
+  border-left-color: #1890ff;
 }
 
 .ant-collapse-item.ant-collapse-item-active > .ant-collapse-header {
   background-color: #e6f7ff;
-  border-left-color: #1890ff;
 }
 .faq-title {
   font-size: 30px;
