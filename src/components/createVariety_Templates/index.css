@@ -1,0 +1,9 @@
+.custom-card {
+  border-left: 4px solid #4285f4; /* Replace 'blue' with the desired color code */
+  border-radius: 5px;
+  transition: box-shadow 0.3s;
+}
+
+.custom-card:hover {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}

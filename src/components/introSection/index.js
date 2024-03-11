@@ -9,21 +9,21 @@ const YourComponent = () => {
       <Col xs={24} sm={24} md={12} lg={12} xl={12}>
         <p
           style={{
-            fontSize: "68px",
+            fontSize: "48px",
             fontWeight: "400",
-            lineHeight: "1",
+            lineHeight: "1.2",
             color: "#000000",
-            marginBottom: "60px",
+            marginBottom: "40px",
           }}
         >
-          Make Your Business More Profitable
+          Email signature for personal branding enhancement.{" "}
         </p>
         <p style={{ width: "23em", fontSize: "20px" }}>
-          Lorem ipsum dolor sit amet consectetur adipiscing elit. Laboriosam
-          assumenda ea quo cupiditate facere deleniti fuga officia.
+          Utilize your email signature as a marketing tool, promoting key
+          services, events, or products to drive business growth
         </p>
         <Button type="primary" size="large">
-          Get Started
+          Create Signature
         </Button>
       </Col>
       <Col xs={24} sm={24} md={12} lg={12} xl={12}>

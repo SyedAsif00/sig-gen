@@ -1,0 +1,33 @@
+.faq-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.individual-faq {
+  width: 80%;
+  max-width: 800px;
+  margin-bottom: 20px; /* Adds space between each FAQ item */
+  border: 1px solid #d9d9d9; /* Adds a border to each FAQ item */
+  border-radius: 4px; /* Rounds the corners */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
+}
+
+.ant-collapse-item {
+  border-radius: 4px; /* Ensures rounded corners for the accordion panels */
+}
+
+.ant-collapse-item > .ant-collapse-header {
+  padding-left: 10px;
+  border-left: 5px solid transparent;
+}
+
+.ant-collapse-item.ant-collapse-item-active > .ant-collapse-header {
+  background-color: #e6f7ff;
+  border-left-color: #1890ff;
+}
+.faq-title {
+  font-size: 30px;
+  margin-bottom: 20px;
+}

@@ -2,10 +2,17 @@ import "./App.css";
 import {
   Navbar,
   IntroSection,
-  Communicate,
+  CreateEmail_Device,
   Features,
   Footer,
   AboutUs,
+  CustomizeEmail_Signature,
+  Faq,
+  CreateEmail_Template,
+  BenefitText,
+  SalesAndMarketing,
+  Influencers,
+  Freelaner,
 } from "../src/components/shared";
 
 function App() {
@@ -14,7 +21,14 @@ function App() {
       <Navbar />
       <IntroSection />
       <Features />
-      <Communicate />
+      <CreateEmail_Device />
+      <CustomizeEmail_Signature />
+      <CreateEmail_Template />
+      <BenefitText />
+      <SalesAndMarketing />
+      <Influencers />
+      <Freelaner />
+      <Faq />
       <Footer />
       <AboutUs />
     </div>
