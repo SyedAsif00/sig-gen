@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./index.css"; // This will be your stylesheet
-
+import useResponsive from "../../hooks/useResponsive";
 const navLinks = [
   { title: "Home", path: "/" },
   { title: "Features", path: "/features" },
@@ -11,10 +11,32 @@ const navLinks = [
 ];
 
 const Navbar = () => {
+  const { isMobileSmall, isMobileMedium, isTablet, isDesktop } =
+    useResponsive();
+
+  const isSmallOrMediumDevice = isMobileSmall || isMobileMedium;
+
+  const [shadow, setShadow] = useState(false);
+
+  const handleScroll = () => {
+    if (window.scrollY > 0) {
+      setShadow(true);
+    } else {
+      setShadow(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <nav className="navbar">
+    <nav className={`navbar ${shadow ? "shadow" : ""}`}>
       <div className="navbar-container">
-        <div className="brand-title">
+        <div style={{ fontSize: isSmallOrMediumDevice ? "20px" : "24px" }}>
           SigGEN
           <span className="brandTitle-dot">.</span>
         </div>

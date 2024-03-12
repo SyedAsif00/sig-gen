@@ -7,9 +7,14 @@ import useResponsive from "../../hooks/useResponsive";
 const YourComponent = () => {
   const { isMobileSmall, isMobileMedium, isTablet, isDesktop } =
     useResponsive();
-
+  const isSmallorMediumDevice = isMobileSmall || isMobileMedium;
   return (
-    <Row gutter={[16, 16]} className="hero-section" align={"middle"}>
+    <Row
+      gutter={[16, 16]}
+      className="hero-section"
+      align={"middle"}
+      style={{ marginTop: isSmallorMediumDevice ? "20px" : "" }}
+    >
       <Col xs={24} sm={24} md={12} lg={12} xl={12}>
         <p
           style={{

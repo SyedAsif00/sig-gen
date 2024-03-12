@@ -1,11 +1,30 @@
 .navbar {
-  background: #fff;
+  background: #fff; /* White background */
+  padding: 0px 100px;
   height: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: sticky;
+  top: 0; /* Stick to the top */
+  z-index: 10; /* Make sure it's above other content */
+  /* Other styles */
 }
 
+.shadow {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* This adds the shadow */
+}
+
+/* ... existing styles ... */
+
+/* Responsive styling if needed */
+@media screen and (max-width: 960px) {
+  .nav-menu {
+    /* Existing responsive styles */
+  }
+
+  /* You may want to add a toggle button for mobile screens */
+}
 .navbar-container {
   display: flex;
   justify-content: space-between;
